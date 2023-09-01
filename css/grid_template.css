@@ -1,0 +1,207 @@
+.container-projects {
+    height: calc(100% - 60px);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+    gap: 15px;
+}
+
+.wrapper-grid-parent {
+    background-color: var(--scd-color);
+    background: linear-gradient(var(--scd-color), var(--scd-color-op));
+
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grid-parent {
+    border-radius: 10px;
+    height: 75%;
+
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 15px;
+
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.grid-parent::-webkit-scrollbar {
+    display: none;
+}
+
+.grid-item {
+    background-color: var(--main-color);
+    border-radius: 7px;
+    padding: 0 15px;
+    box-shadow: 0 1px 5px #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid-item._hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.grid-item._hover:hover {
+    opacity: 0.6;
+}
+
+.grid-item._hover:active {
+    opacity: 0.2;
+}
+
+/* ---------- CUSTOMIZED ---------- */
+
+.grid-parent._row70 {
+    grid-auto-rows: 70px;
+}
+
+.grid-item._hover-project:hover {
+    border: 2px solid #FFF;
+}
+
+.grid-item._hover-project:active {
+    border: 3px solid #FFF;
+}
+
+.grid-parent._display {
+    background-color: var(--main-color);
+    grid-template-columns: 1fr;
+    grid-auto-rows: 85px;
+    padding: 15px;
+    padding-left: 22px;
+    column-gap: 22px;
+}
+
+.grid-item._false {
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.grid-item.current-project {
+    border: 2px solid #FFF;
+}
+
+.checkbox {
+    background-color: #FFF;
+    color: var(--main-color);
+    font-weight: 700;
+    
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.delete-btn {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+.delete-btn:active {
+    opacity: 0.6;
+}
+
+.checkbox:hover {
+    opacity: 0.6;
+}
+
+.checkbox:active {
+    opacity: 0.2;
+}
+
+.default {
+    border: 1px solid gray;
+    color: gray;
+    box-shadow: none;
+}
+
+/* ---------- FORMS ---------- */
+
+.form-project {
+    display: none;
+}
+
+input {
+    font-size: inherit;
+    width: 70%;
+    background-color: inherit;
+    color: #FFF;
+    font-family: inherit;
+}
+
+input._small {
+    width: 40%;
+}
+
+button {
+    outline: 2px solid white;
+    font-size: 16px;
+    color: inherit;
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+button:active {
+    opacity: 1;
+}
+
+.green-btn {
+    color: green;
+    outline-color: green;
+    margin-right: 5px;
+}
+.red-btn {
+    color: red;
+    outline-color: red;
+}
+
+/* ---------- CUSTOM SELECT BTN ---------- */
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    width: 150px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: var(--fnt-first);
+    color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+option:checked {
+    display: none;
+}
+
+option:hover,
+option:focus {
+    background-color: var(--thd-color);
+}
