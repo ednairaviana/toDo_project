@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+
+    <!-- LINK ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- LINK FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/grid_template.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1 class="logo">ToDo</h1>
+
+        <nav class="main-nav">
+            <ul>
+                <li id="dashboard">Dashboard</li>
+                <li id="tasks">Tasks</li>
+                <li id="projects">Projects</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="section-dashboard">
+            <h1 class="main-title">Dashboard</h1>
+        </section>
+
+        <section id="section-task">
+            <h1 class="main-title">Tasks</h1>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+
+        <section id="section-projects">
+            <h1 class="main-title">Projects</h1>
+
+            <div class="container-projects">
+                <div class="wrapper-grid-parent">
+                    <h2 class="main-subtitle">Project List</h2>
+                    
+                    <div id="btn-project" class="grid-item _false default _hover">
+                        <p>Add new project</p>
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </div>
+                    <div style="display: none;" id="form-project" class="grid-item _false">
+                        <input id="input-project" type="text" maxlength="15" autocomplete="off">
+                        <div>
+                            <button id="confirm-project" class="green-btn">✔</button>
+                            <button id="cancel-project" class="red-btn">✖</button>
+                        </div>
+                    </div>
+
+                    <div id="project-list" class="grid-parent _row70"></div>
+                </div>
+
+                <div style="display: none;" id="project-display" class="wrapper-grid-parent">
+                    <h2 id="title-project" class="main-subtitle">Task List</h2>
+
+                    <div id="btn-task" class="grid-item default _hover _false">
+                        <p>Add new task</p>
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </div>
+                    <div style="display: none;" id="form-task" class="grid-item _false">
+                        <input id="input-task" class="_small" type="text" maxlength="30" autocomplete="off">
+                        <div class="custom-select">
+                            <select name="priority" id="select-task" 
+                                onfocus="this.size=3;"
+                                onblur="this.size=0;"
+                                onchange="this.size=1; this.blur()"
+                            >
+                                <option selected disabled value="">Select priority</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="confirm-task" class="green-btn">✔</button>
+                            <button id="cancel-task" class="red-btn">✖</button>
+                        </div>
+                    </div>
+
+                    <div id="task-list" class="grid-parent _display"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+<script src="dist/main.js"></script>
+</html>

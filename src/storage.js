@@ -42,14 +42,12 @@ function deleteTodo(projectIndex, todoIndex) {
 }
 
 function initStorage() {
+    localStorage.setItem("storageProject", JSON.stringify(storageProject));
     let array = JSON.parse(localStorage.getItem("storageProject"));
-
     array.forEach(element => {
         storageProject.push(element);
     });
 }
-
-createProject("Project 1")
 
 // localStorage.setItem("storageProject", JSON.stringify(storageProject));
 // storageProject.push(JSON.parse(localStorage.getItem("storageProject")));
