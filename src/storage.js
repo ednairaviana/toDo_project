@@ -49,6 +49,8 @@ function initStorage() {
     });
 }
 
+createProject("Project 1")
+
 // localStorage.setItem("storageProject", JSON.stringify(storageProject));
 // storageProject.push(JSON.parse(localStorage.getItem("storageProject")));
 
