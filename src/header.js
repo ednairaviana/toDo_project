@@ -38,6 +38,7 @@ function displaySection() {
     });
     navProjects.addEventListener("click", ()=> {
         projectSection.style.display = "block";
+        initStorage();
         renderProjectList();
     });
 }
