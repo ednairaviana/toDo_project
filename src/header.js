@@ -1,5 +1,4 @@
 import { renderProjectList } from "./projects";
-import { renderTaskList } from "./tasks";
 
 const navNodeList = document.querySelectorAll(".main-nav ul li")
 const navDashboard = document.querySelector("#dashboard");
@@ -38,7 +37,6 @@ function displaySection() {
     });
     navProjects.addEventListener("click", ()=> {
         projectSection.style.display = "block";
-        initStorage();
         renderProjectList();
     });
 }

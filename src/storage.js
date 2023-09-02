@@ -42,11 +42,14 @@ function deleteTodo(projectIndex, todoIndex) {
 }
 
 function initStorage() {
-    localStorage.setItem("storageProject", JSON.stringify(storageProject));
-    let array = JSON.parse(localStorage.getItem("storageProject"));
-    array.forEach(element => {
-        storageProject.push(element);
-    });
+    if ((localStorage.getItem("storageProject")) === null) {
+        localStorage.setItem("storageProject", JSON.stringify(storageProject));
+    } else {
+        let array = JSON.parse(localStorage.getItem("storageProject"));;
+        array.forEach(element => {
+            storageProject.push(element);
+        });
+    }
 }
 
 // localStorage.setItem("storageProject", JSON.stringify(storageProject));
